@@ -56,6 +56,7 @@ Rails.application.routes.draw do
   #   end
   #devise_for :users
   root "grams#index"
-  resources :grams
-  resources :pictures
+  resources :grams do
+    resources :comments, only: [:create]
+  end
 end
