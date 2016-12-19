@@ -1,1 +1,5 @@
-<%= @gram.inspect %>
+<%= simple_form_for @gram do |f| %>
+  <%= f.input :message %>
+  <%= f.input :picture %>
+  <%= f.submit 'Update', class: 'my-btn' %>
+<% end %>
